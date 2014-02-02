@@ -6,6 +6,7 @@
  */
 
 #include "../inc/system.h"
+#include "../inc/uart.h"
 
 int main(void) {
 

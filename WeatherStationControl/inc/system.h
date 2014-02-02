@@ -21,13 +21,6 @@
 #include <util/delay.h>
 
 /* helper functions */
-/* helper functions */
-int check_bit(unsigned int Port_Pin, unsigned int Port_Bit) {
-
-	if(Port_Pin & (1 << Port_Bit))
-		return 1;
-	else
-		return 0;
-}
+int check_bit(unsigned int Port_Pin, unsigned int Port_Bit);
 
 #endif /* SYSTEM_H_ */
