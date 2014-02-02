@@ -5,6 +5,8 @@
  *      Author: heiko
  */
 
+#include "../inc/system.h"
+
 int main(void) {
 
 	while(1) {
