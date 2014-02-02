@@ -62,13 +62,13 @@ unsigned int RFM12_command (unsigned int command)
 
 void RFM12_send (unsigned char senden)
 {
-	loop_until_bit_is_clear (RFM12_IRQ_pin, RFM12_IRQ_bit);	//wait for previously TX over
+	loop_until_bit_is_clear (RFM12_IRQ_pin, RFM12_IRQ_bit);	//wait for previously TX over	/* TODO: check for timing security/deadlock! */
 	RFM12_command (RFM12_command_TXRW | senden);
 }
 
 unsigned char RFM12_recv ()
 {
-	loop_until_bit_is_clear (RFM12_IRQ_pin, RFM12_IRQ_bit);	//wait for data
+	loop_until_bit_is_clear (RFM12_IRQ_pin, RFM12_IRQ_bit);	//wait for data					/* TODO: check for timing security/deadlock! */
 	RFM12_command (RFM12_command_STAT);
 	return RFM12_command (RFM12_command_RXFR) & 0x00FF;
 }
