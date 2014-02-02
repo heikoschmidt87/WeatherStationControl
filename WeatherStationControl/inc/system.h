@@ -17,8 +17,14 @@
 /* includes */
 #include <avr/io.h>
 #include <avr/sfr_defs.h>
-#include <stdlib.h>
+
 #include <util/delay.h>
+
+#include <stdlib.h>
+#include <stdfix-gcc.h>
+
+#include <math.h>
+
 
 /* helper functions */
 int check_bit(unsigned int Port_Pin, unsigned int Port_Bit);
