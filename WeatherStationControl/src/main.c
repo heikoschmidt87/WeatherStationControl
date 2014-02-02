@@ -7,6 +7,7 @@
 
 #include "../inc/system.h"
 #include "../inc/uart.h"
+#include "../inc/WindDirMeasurement.h"
 
 int main(void) {
 
