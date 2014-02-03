@@ -3,6 +3,9 @@
  *
  *  Created on: 02.02.2014
  *      Author: heiko
+ *
+ *  (C) Heiko Schmidt
+ *  License: CC BY-NC-SA 4.0
  */
 
 #ifndef WINDDIRMEASUREMENT_H_

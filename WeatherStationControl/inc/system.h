@@ -3,6 +3,9 @@
  *
  *  Created on: 01.02.2014
  *      Author: heiko
+ *
+ *  (C) Heiko Schmidt
+ *  License: CC BY-NC-SA 4.0
  */
 
 #ifndef SYSTEM_H_
