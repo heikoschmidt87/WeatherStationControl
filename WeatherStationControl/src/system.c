@@ -14,3 +14,8 @@ int check_bit(unsigned int Port_Pin, unsigned int Port_Bit) {
 	else
 		return 0;
 }
+
+unsigned long isqrt(unsigned long nVal) {
+	/* TODO: implement this */
+	return 0;
+}

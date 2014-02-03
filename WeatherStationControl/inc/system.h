@@ -28,5 +28,6 @@
 
 /* helper functions */
 int check_bit(unsigned int Port_Pin, unsigned int Port_Bit);
+unsigned long isqrt(unsigned long nVal);
 
 #endif /* SYSTEM_H_ */
