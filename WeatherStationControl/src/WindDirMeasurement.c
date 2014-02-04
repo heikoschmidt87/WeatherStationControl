@@ -10,16 +10,18 @@
 
 #include "../inc/WindDirMeasurement.h"
 
+static void InitWindDirADC(void) {
+
+	/* configure ADC */
+	ADMUX = (1 << REFS0) | (1 << ADLAR);
+	ADCSRA |= (1 << ADEN) | (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0);
+}
+
 static void GetAvgValues(long *nNorth, long *nSouthWest, long *nSouthEast, int nMeasureCount, const int nMeasureDelayTimeInMs) {
 
 	*nNorth = 0;
 	*nSouthWest = 0;
 	*nSouthEast = 0;
-
-
-	/* configure ADC */
-	ADMUX = (1 << REFS0) | (1 << ADLAR);
-	ADCSRA |= (1 << ADEN) | (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0);
 
 	/* dummy readout as advised by Atmel */
 	ADCSRA |= (1 << ADSC);
@@ -70,6 +72,8 @@ static void GetAvgValues(long *nNorth, long *nSouthWest, long *nSouthEast, int n
 int GetWindDirection(void) {
 
 	long nNorth, nSouthWest, nSouthEast;
+
+	InitWindDirADC();
 
 	GetAvgValues(&nNorth, &nSouthWest, &nSouthEast, 10, 100);
 

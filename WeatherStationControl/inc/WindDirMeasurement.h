@@ -51,6 +51,7 @@
 #include "system.h"
 
 /* functions */
+static void InitWindDirADC(void);
 static void GetAvgValues(long *nNorth, long *nSouthWest, long *nSouthEast, int nMeasureCount, int nMeasureDelayTimeInMs);
 int GetWindDirection(void);
 
